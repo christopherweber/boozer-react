@@ -4,10 +4,9 @@ import React from 'react'
 export default class Search extends React.Component {
     render() {
         return (
-        <form >
-            <label>Search: </label>
-            <input onChange={(e) => this.props.onChangeHandler(e)}name="input"></input>
-            <button>Search</button>
+        <form className="search-bar">
+            <label></label>
+            <input onChange={(e) => this.props.onChangeHandler(e)}name="input" placeholder="🔍"></input>
         </form>
         )
     }

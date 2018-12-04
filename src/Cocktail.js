@@ -6,7 +6,7 @@ class Cocktail extends React.Component {
   }
     render(){
         return(
-            <div onClick={(e) => {this.props.clickHandler(e, this.props.cocktail)}}>
+            <div className="cocktail-container" onClick={(e) => {this.props.clickHandler(e, this.props.cocktail)}}>
                 {
                     this.props.cocktail.name
                 }

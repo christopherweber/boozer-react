@@ -1,10 +1,9 @@
 import React from 'react';
 import CocktailList from './CocktailList';
-import Cocktail  from './Cocktail'
 import CocktailDisplay from './CocktailDisplay'
 import Search from './Search'
+import CocktailForm from './CocktailForm'
 
-// is it working??
 
 class CocktailsContainer extends React.Component {
 
@@ -42,15 +41,20 @@ class CocktailsContainer extends React.Component {
 
         return (
              <div>
-                 <h1>Boozr</h1>
+                 <div className="header-and-logo">
+                     <img src="https://linsedition.files.wordpress.com/2016/04/beer-gif1.gif"></img>
+                    <h1>Boozr</h1>
+                 </div>
                  <Search onChangeHandler={this.onChangeHandler} />
-                 <CocktailDisplay selectedCocktail={this.state.selectedCocktail}/>
-                 <CocktailList cocktails={filteredCocktails} clickHandler={this.clickHandler} />
+                 <div className="container">
+                    <CocktailList cocktails={filteredCocktails} clickHandler={this.clickHandler} />
+                    <CocktailDisplay selectedCocktail={this.state.selectedCocktail}/>
+                    <CocktailForm cocktails={this.state}/>
+                </div>m
             </div>
         )
 
     }
 }
 
-// so whats wrong?
 export default CocktailsContainer

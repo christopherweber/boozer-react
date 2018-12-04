@@ -5,7 +5,7 @@ class CocktailList extends React.Component {
 
     render(){
         return(
-            <div>
+            <div className="milan">
                {
                    this.props.cocktails.map(cocktail => {
                        return <Cocktail cocktail={cocktail} clickHandler={this.props.clickHandler} />
